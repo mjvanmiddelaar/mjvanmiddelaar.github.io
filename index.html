@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maarten van Middelaar — Software Engineer</title>
+  <meta name="description" content="Maarten (Martinus Johannes van Middelaar) — software engineer building payments, GraphQL APIs, and cloud infrastructure. Based in Kenya." />
+  <link rel="canonical" href="https://middelaar.dev/" />
+  <meta property="og:title" content="Maarten van Middelaar — Software Engineer" />
+  <meta property="og:description" content="Software engineer building payment systems, GraphQL APIs, and cloud infrastructure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://middelaar.dev/" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220; /* slate-950 */
+      --fg: #e5e7eb; /* gray-200 */
+      --muted: #9ca3af; /* gray-400 */
+      --brand: #22d3ee; /* cyan-400 */
+      --card: #0f172a; /* slate-900 */
+      --line: #1f2937; /* gray-800 */
+      --accent: #a78bfa; /* violet-400 */
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --fg:#0b1220; --muted:#475569; --card:#f8fafc; --line:#e5e7eb; }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;backdrop-filter:saturate(1.5) blur(8px);background:color-mix(in hsl, var(--bg) 85%, transparent);border-bottom:1px solid var(--line);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .logo-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;color:#0b1220;font-weight:900}
+    .nav-links{display:flex;gap:18px}
+    .nav a{color:var(--fg);opacity:.9}
+    .nav a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+    .btn:hover{border-color:var(--brand)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding-block:48px;border-bottom:1px solid var(--line)}
+    .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.1;margin:0 0 12px 0}
+    .hero p{color:var(--muted);font-size:1.06rem}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:color-mix(in hsl, var(--brand) 15%, transparent);border:1px solid color-mix(in hsl, var(--brand) 40%, var(--line));color:var(--brand);font-weight:600;font-size:.85rem}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    section{padding-block:36px;border-bottom:1px solid var(--line)}
+    h2{font-size:1.4rem;margin:0 0 16px 0}
+    ul{padding-left:18px;margin:10px 0}
+    li{margin:6px 0}
+    .footer{padding:24px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace; font-size:.95rem}
+    .tag{display:inline-block;padding:6px 10px;border:1px dashed var(--line);border-radius:999px;margin:4px 6px 0 0;color:var(--muted)}
+    .kicker{color:var(--muted);font-size:.9rem}
+    .project{display:flex;gap:14px}
+    .project .dot{width:10px;height:10px;border-radius:999px;background:var(--brand);position:relative;top:9px;flex:none}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .contact-cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+    .contact-cards a{justify-content:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}.contact-cards{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Martinus Johannes van Middelaar",
+    "alternateName": "Maarten van Middelaar",
+    "jobTitle": "Software Engineer",
+    "url": "https://middelaar.dev/",
+    "email": "mailto:maarten@middelaar.dev",
+    "telephone": "+254114055585",
+    "address": {"@type":"PostalAddress","addressCountry":"KE"},
+    "sameAs": [
+      "https://github.com/mbesambee",
+      "https://www.linkedin.com/in/maarten-van-middelaar/"
+    ]
+  }
+  </script>
+</head>
+<body>
+<header>
+  <div class="wrap nav" role="navigation">
+    <div class="logo"><span aria-hidden class="logo-mark">M</span> <span>Maarten van Middelaar</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="home">
+    <div>
+      <span class="pill">Software Engineer · Nairobi, Kenya</span>
+      <h1>Building reliable payment systems, APIs, and cloud infrastructure.</h1>
+      <p>I’m Maarten (Martinus van Middelaar). I design and ship production systems: Python (Flask & FastAPI), GraphQL, React/TypeScript, and AWS (Fargate, CDK). I enjoy clear models, clean interfaces, and strong observability.</p>
+      <div style="margin-top:14px">
+        <a class="btn" href="#contact">Get in touch →</a>
+        <a style="margin-left:10px" href="#work">See selected work</a>
+      </div>
+      <div style="margin-top:14px" class="kicker mono">Currently: building a payments platform and plan management system for ALX Africa.</div>
+    </div>
+    <div class="card">
+      <div class="kicker">At a glance</div>
+      <ul>
+        <li><strong>Backend:</strong> Python 3.x, Flask, FastAPI, SQLAlchemy, Strawberry GraphQL</li>
+        <li><strong>Infra:</strong> AWS ECS/Fargate, CDK (TypeScript), Redis, Celery, MySQL/PostgreSQL</li>
+        <li><strong>Frontend:</strong> React + TypeScript, Vite, React Router</li>
+        <li><strong>Dev:</strong> Docker/OrbStack, PyTest, GitHub Actions</li>
+      </ul>
+      <div>
+        <span class="tag">Payments</span>
+        <span class="tag">GraphQL</span>
+        <span class="tag">Observability</span>
+        <span class="tag">Data Modeling</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <p>I value straightforward architecture, good naming, and predictable deployments. I like taking complex domains—subscriptions, invoicing, communication pipelines—and turning them into readable code and resilient services.</p>
+        <p class="kicker">Based in Kenya; comfortable working across NL/EAT time zones.</p>
+      </div>
+      <div class="card">
+        <ul>
+          <li><strong>Focus:</strong> payment flows, plan/invoice engines, async jobs</li>
+          <li><strong>APIs:</strong> REST & GraphQL with strong typing and tests</li>
+          <li><strong>Ops:</strong> metrics, alerts, and cost‑aware scaling</li>
+          <li><strong>Collab:</strong> clear docs, small PRs, steady iterations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="kicker">Backend</div>
+        <ul>
+          <li>Python · Flask · FastAPI</li>
+          <li>SQLAlchemy 2.x · Alembic</li>
+          <li>Strawberry GraphQL</li>
+          <li>Celery · Redis · RQ</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="kicker">Cloud & DevOps</div>
+        <ul>
+          <li>AWS ECS/Fargate · CDK</li>
+          <li>Docker · OrbStack</li>
+          <li>CI/CD · GitHub Actions</li>
+          <li>Logging & Tracing</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="kicker">Frontend</div>
+        <ul>
+          <li>React · TypeScript · Vite</li>
+          <li>React Router</li>
+          <li>Testing Library</li>
+          <li>UX for dashboards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="card project">
+        <span class="dot" aria-hidden></span>
+        <div>
+          <strong>ALX Payments Platform</strong>
+          <div class="kicker">Plan engine · invoicing · webhook processing · observability</div>
+          <ul>
+            <li>GraphQL gateway + Flask services with SQLAlchemy 2.x</li>
+            <li>Async jobs (Celery) for invoice generation and comms scheduling</li>
+            <li>Deployed on AWS Fargate with CDK and autoscaling policies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card project">
+        <span class="dot" aria-hidden></span>
+        <div>
+          <strong>Workslip — Inventory &amp; Maintenance Management</strong>
+          <div class="kicker">Asset tracking · work orders · preventive maintenance · mobile‑first</div>
+          <ul>
+            <li>End‑to‑end item lifecycle: intake, stock counts, location moves, disposals</li>
+            <li>Work orders with SLAs, assignments, and status transitions</li>
+            <li>Preventive schedules &amp; reminders (cal/time/usage‑based)</li>
+            <li>Stack: FastAPI/GraphQL, React + TypeScript, PostgreSQL, Celery/Redis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faith">
+    <h2>Bahá’í Faith</h2>
+    <div class="card">
+      <p>
+        I am a member of the <strong>Bahá’í Faith</strong>, a global community working for the unity of humankind.
+        The Faith inspires my approach to software engineering: clarity, service, and a commitment to building systems
+        that help people connect and collaborate. Its principles—such as consultation, justice, and universal education—guide
+        both my professional and personal life.
+      </p>
+      <blockquote style=\"margin:16px 0;padding-left:16px;border-left:3px solid var(--accent);font-style:italic;\">
+        “The earth is but one country, and mankind its citizens.” — Bahá’u’lláh
+      </blockquote>
+      <p class="kicker">
+        <a href="https://www.bahai.org" target="_blank" rel="noopener">Learn more at bahai.org →</a>
+      </p>
+    </div>
+  </section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="card">
+        <p>Quickest is email. I’m open to interesting problems and practical collaborations.</p>
+        <div class="contact-cards">
+          <a class="btn" href="mailto:maarten@middelaar.dev" aria-label="Email Maarten">Email</a>
+          <a class="btn" href="https://github.com/mbesambee" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/maarten-van-middelaar/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="tel:+254114055585" aria-label="Call Maarten">Phone</a>
+          <a class="btn" href="#" id="copy-email" title="Copy email to clipboard">Copy email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer wrap" role="contentinfo">
+    <div>© <span id="y"></span> Maarten van Middelaar</div>
+    <div class="mono">middelaar.dev</div>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  document.getElementById('copy-email').addEventListener('click', function(e){
+    e.preventDefault();
+    navigator.clipboard.writeText('maarten@middelaar.dev').then(()=>{
+      this.textContent = 'Copied!';
+      setTimeout(()=> this.textContent = 'Copy email', 1500);
+    });
+  });
+</script>
+</body>
+</html>
